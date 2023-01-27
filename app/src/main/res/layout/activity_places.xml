@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".places">
+
+
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/slider"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:iss_auto_cycle="true"
+        app:iss_placeholder="@drawable/bg"
+        app:iss_period="1000"
+        app:iss_delay="0">
+
+    </com.denzcoskun.imageslider.ImageSlider>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+                <TextView
+                    android:id="@+id/Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="serif"
+                    android:text="Name"
+                    android:textColor="#E81C1C1C"
+                    android:textSize="36dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Name"
+                    android:drawableStart="@drawable/location"
+                    android:text="Lucknow, Uttar Pradesh" />
+
+                <TextView
+                    android:id="@+id/yt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/white"
+                    android:layout_below="@+id/Name"
+                    android:textAlignment="gravity"
+                    android:layout_alignParentEnd="true"
+                    android:text="  Watch"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    android:drawableStart="@drawable/youtube">
+
+                </TextView>
+
+
+            </RelativeLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                app:dividerColor="#BDBDBD" />
+
+            <RelativeLayout
+                android:id="@+id/constraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+
+                <RelativeLayout
+                    android:id="@+id/Temperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="10dp">
+
+                    <ImageView
+                        android:id="@+id/temp"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/round"
+                        android:backgroundTint="#405A9892"
+                        android:padding="10dp"
+                        app:srcCompat="@drawable/sunny" />
+
+
+                    <TextView
+                        android:id="@+id/temp1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_toRightOf="@+id/temp"
+                        android:layout_weight="1"
+                        android:text="Temp"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/temp_diplay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/temp1"
+                        android:layout_marginStart="16dp"
+                        android:layout_toRightOf="@+id/temp"
+                        android:layout_weight="1"
+                        android:fontFamily="serif"
+                        android:text="32° C"
+                        android:textColor="#B3000000"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/Distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_alignParentEnd="true"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/dist_img"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/round"
+                        android:backgroundTint="#405A9892"
+                        android:padding="12dp"
+                        app:srcCompat="@drawable/location2" />
+
+
+                    <TextView
+                        android:id="@+id/dist_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_toRightOf="@+id/dist_img"
+
+                        android:layout_weight="1"
+                        android:text="Distance"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/dist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/dist_title"
+                        android:layout_marginStart="16dp"
+                        android:layout_toRightOf="@+id/dist_img"
+                        android:layout_weight="1"
+                        android:fontFamily="serif"
+                        android:text="424 KM"
+                        android:textColor="#B3000000"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                app:dividerColor="#BDBDBD" />
+
+            <TextView
+                android:id="@+id/box1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:text="It has been a tourist destination for 1000s of years."
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/box2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="The architechure was constructed approx 17 B.C. and till know."
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/flink"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:textColor="#0000EE"
+                android:text="Connecting to Internet"
+                android:textSize="16sp" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                app:dividerColor="#BDBDBD" />
+
+
+            <Button
+                android:id="@+id/visit"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="serif"
+                android:text="Visit Site"
+                android:backgroundTint="#C8DCDA"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:cornerRadius="16dp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
